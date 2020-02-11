@@ -32,3 +32,16 @@ body{
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.container-fluid{
+  max-width: 100%;
+  padding: 0 30px;
+}
+
+.title{
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 700;
+  color: $bg;
+  text-align: center;
+}
