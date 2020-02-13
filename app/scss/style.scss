@@ -211,7 +211,12 @@
     }
   }
   &-stars{
+    display: flex;
+    align-items: center;
     color: #b0bec5;
+    .rate-stars{
+      margin-right: 5px;
+    }
     span{
       color: $bg;
       font-size: 12px;
@@ -241,3 +246,31 @@
   }
 }
 
+.products-slider{
+  padding: 115px 0;
+  &__title{
+    margin-bottom: 50px;
+  }
+  .slick-dots{
+    text-align: center;
+    margin-top: 30px;
+    li{
+      display: inline-block;
+      margin: 0px 3px;
+      button{
+        font-size: 0;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: none;
+        background-color: #e8e8e8;
+        cursor: pointer;
+      }
+    }
+    li.slick-active{
+      button{
+        background-color: $green;
+      }
+    }
+  }
+}
