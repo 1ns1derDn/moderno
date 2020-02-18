@@ -1,7 +1,10 @@
 html{
   box-sizing: border-box;
 }
-
+html,
+body {
+	height: 100%;
+}
 *,
 *::before,
 *::after{
@@ -44,4 +47,48 @@ body{
   font-weight: 700;
   color: $bg;
   text-align: center;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.page-content{
+  background-color: $grey;
+}
+.footer {
+	flex: 0 0 auto;
+}
+.breadcrumbs{
+  &__inner{
+    padding: 45px 0 40px;
+  }
+  &__list{
+    li{
+      display: inline-block;
+      position: relative;
+      & + li{
+        padding-left: 24px;
+        &::before{
+          content: "-";
+          position: absolute;
+          color: $green;
+          left: 8px;
+        }
+      }
+      &:last-child{
+        a,
+        span{
+          color: $bg;
+        }
+      }
+    }
+    a{
+      color: #b0bec5;
+    }
+  }
 }
